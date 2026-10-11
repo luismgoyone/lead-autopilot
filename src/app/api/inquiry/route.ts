@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { inquirySchema } from "@/lib/inquiry";
+import { processInquiry } from "@/lib/process-inquiry";
 
 export async function POST(request: Request) {
   let body: unknown;
@@ -24,8 +25,23 @@ export async function POST(request: Request) {
   const inquiry = result.data;
   const firstName = inquiry.name.split(" ")[0];
 
-  return Response.json({
-    ok: true,
-    message: `Thanks, ${firstName}. We got your message and will reply to ${inquiry.email} shortly.`,
-  });
+  try {
+    const { row, classification } = await processInquiry(inquiry);
+    return Response.json({
+      ok: true,
+      message: `Thanks, ${firstName}. We got your message and will reply to ${inquiry.email} shortly.`,
+      id: row.id,
+      status: row.status,
+      classification,
+    });
+  } catch (err) {
+    console.error("processInquiry failed:", err);
+    return Response.json(
+      {
+        ok: false,
+        error: "Sorry, we couldn't save your message. Please try again or call (074) 555-0142.",
+      },
+      { status: 500 },
+    );
+  }
 }

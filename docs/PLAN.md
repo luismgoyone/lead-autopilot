@@ -79,8 +79,8 @@ Keys go in `.env.local` and Vercel's environment variables (see `.env.example`).
 - [x] Run the 20 sample messages and fix the prompt until the tags look right
 
 **Phase 4: Google Sheets log**
-- [ ] Sheet columns: date, name, email, message, intent, urgency, summary, draft reply, status
-- [ ] One row per inquiry from the API route
+- [x] Sheet columns: date, name, email, message, intent, urgency, summary, draft reply, status
+- [x] One row per inquiry from the API route
 
 **Phase 5: Replies and alerts**
 - [ ] Routine: send the drafted reply right away via Resend
