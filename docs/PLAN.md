@@ -68,10 +68,10 @@ Keys go in `.env.local` and Vercel's environment variables (see `.env.example`).
 - [ ] Push to GitHub and deploy to Vercel
 
 **Phase 2: Clinic site and inquiry form**
-- [ ] One-page Pinecrest Dental site: hero, services, hours, inquiry form
-- [ ] Form fields: name, email, phone, message, preferred time
-- [ ] Validate in the browser and on the server (Zod)
-- [ ] API route `/api/inquiry` that receives the form and returns a success message
+- [x] One-page Pinecrest Dental site: hero, services, hours, inquiry form
+- [x] Form fields: name, email, phone, message, preferred time
+- [x] Validate in the browser and on the server (Zod)
+- [x] API route `/api/inquiry` that receives the form and returns a success message
 
 **Phase 3: The AI step**
 - [ ] `classifyLead()` in its own file, calling Gemini
