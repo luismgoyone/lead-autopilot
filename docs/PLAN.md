@@ -93,9 +93,9 @@ Keys go in `.env.local` and Vercel's environment variables (see `.env.example`).
 - [x] "Minutes saved" counter (inquiries handled × 5 minutes)
 
 **Phase 7: Demo mode and safety**
-- [ ] Add the safety items below
-- [ ] Show visitors the AI's result right after they submit
-- [ ] Read-only view of the inquiry log for visitors
+- [x] Add the safety items below
+- [x] Show visitors the AI's result right after they submit
+- [x] Read-only view of the inquiry log for visitors
 
 **Phase 8: Launch**
 - [ ] Record the demo video and publish the case study
