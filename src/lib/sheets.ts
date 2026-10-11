@@ -117,15 +117,18 @@ function ensureTab() {
   return ready;
 }
 
-export async function appendInquiry(row: InquiryRow) {
+// Appends a row and returns its row number (for later updates).
+export async function appendInquiry(row: InquiryRow): Promise<number> {
   await ensureTab();
-  await sheetsFetch(
+  const res = await sheetsFetch<{ updates: { updatedRange: string } }>(
     `/values/${range("A:M")}:append?valueInputOption=RAW&insertDataOption=INSERT_ROWS`,
     {
       method: "POST",
       body: JSON.stringify({ values: [COLUMNS.map((c) => row[c.key])] }),
     },
   );
+  // updatedRange looks like "'Inquiries'!A5:M5"
+  return Number(res.updates.updatedRange.match(/!A(\d+)/)?.[1]);
 }
 
 export async function listInquiries(): Promise<(InquiryRow & { rowNumber: number })[]> {
