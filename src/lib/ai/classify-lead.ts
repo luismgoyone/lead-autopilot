@@ -1,9 +1,11 @@
-import { GoogleGenAI } from "@google/genai";
+import { generateText, Output } from "ai";
 import { z } from "zod";
 import type { Inquiry } from "@/lib/inquiry";
 import { SYSTEM_PROMPT, buildUserPrompt } from "./prompt";
 
-// All AI calls go through this file, so switching providers changes one file.
+// All AI calls go through this file. Requests route through Vercel AI Gateway,
+// so switching providers is just a different AI_MODEL, e.g.
+// "google/gemini-3.8-flash" → "anthropic/claude-sonnet-5.5".
 
 export const classificationSchema = z.object({
   intent: z.enum(["booking", "pricing", "emergency", "question", "spam"]),
@@ -15,32 +17,22 @@ export const classificationSchema = z.object({
 
 export type Classification = z.infer<typeof classificationSchema>;
 
-const responseJsonSchema = z.toJSONSchema(classificationSchema);
-
-const MODEL = process.env.GEMINI_MODEL || "gemini-2.5-flash";
+const DEFAULT_MODEL = "google/gemini-3.8-flash";
 const TIMEOUT_MS = 15_000;
 
 export async function classifyLead(
   inquiry: Inquiry,
   receivedAt = new Date(),
 ): Promise<Classification> {
-  const apiKey = process.env.GEMINI_API_KEY;
-  if (!apiKey) throw new Error("GEMINI_API_KEY is not set");
-
-  const ai = new GoogleGenAI({ apiKey });
-  const response = await ai.models.generateContent({
-    model: MODEL,
-    contents: buildUserPrompt(inquiry, receivedAt),
-    config: {
-      systemInstruction: SYSTEM_PROMPT,
-      responseMimeType: "application/json",
-      responseJsonSchema,
-      temperature: 0.2,
-      abortSignal: AbortSignal.timeout(TIMEOUT_MS),
-    },
+  const { output } = await generateText({
+    model: process.env.AI_MODEL || DEFAULT_MODEL,
+    instructions: SYSTEM_PROMPT,
+    prompt: buildUserPrompt(inquiry, receivedAt),
+    output: Output.object({ schema: classificationSchema }),
+    temperature: 0.2,
+    timeout: TIMEOUT_MS,
   });
-
-  return classificationSchema.parse(JSON.parse(response.text ?? ""));
+  return output;
 }
 
 // Approval rule from the plan: hold anything urgent, emergency or unsure.
