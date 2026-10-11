@@ -88,9 +88,9 @@ Keys go in `.env.local` and Vercel's environment variables (see `.env.example`).
 - [x] Send every inquiry to the owner's Discord or Slack
 
 **Phase 6: Owner dashboard**
-- [ ] Password-protected page listing inquiries with their tags
-- [ ] "Approve and send" button with an edit box for held drafts
-- [ ] "Minutes saved" counter (inquiries handled × 5 minutes)
+- [x] Password-protected page listing inquiries with their tags
+- [x] "Approve and send" button with an edit box for held drafts
+- [x] "Minutes saved" counter (inquiries handled × 5 minutes)
 
 **Phase 7: Demo mode and safety**
 - [ ] Add the safety items below
