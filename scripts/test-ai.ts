@@ -10,9 +10,15 @@ const isHeld = (c: Parameters<typeof needsApproval>[0]) =>
 // Rough check: a Tagalog reply usually contains one of these words.
 const TAGALOG = /\b(po|opo|salamat|kayo|namin|natin|bukas|ngayon|pwede|puwede)\b/i;
 
+// Free tiers allow only a few requests a minute; space them out.
+const DELAY_MS = Number(process.env.AI_TEST_DELAY_MS ?? 13_000);
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
 async function main() {
+  console.log(`Model: ${process.env.AI_MODEL}\n`);
   let passed = 0;
   for (const [i, sample] of samples.entries()) {
+    if (i > 0) await sleep(DELAY_MS);
     const label = `${String(i + 1).padStart(2)}. ${sample.message.slice(0, 50)}`;
     try {
       const c = await classifyLead({

@@ -35,7 +35,7 @@ export const samples: Sample[] = [
   { name: "Ana Dizon", message: "My cheek has been swelling up since this morning and the pain is getting worse.", expect: { intent: "emergency", urgency: "high", held: true } },
 
   // Unhappy patients: held
-  { name: "Jun dela Cruz", message: "Nobody called me back yesterday! I've been waiting two days.", expect: { intent: "question", urgency: "medium", held: true } },
+  { name: "Jun dela Cruz", message: "Nobody called me back yesterday! I've been waiting two days.", expect: { intent: "question", held: true } },
   { name: "Tess Aquino", message: "Very disappointed. My filling fell out a week after the visit and I paid full price.", expect: { intent: "question", held: true } },
 
   // Other languages: reply in the same language

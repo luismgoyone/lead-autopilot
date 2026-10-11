@@ -21,7 +21,7 @@ export const classificationSchema = z.object({
 
 export type Classification = z.infer<typeof classificationSchema>;
 
-const DEFAULT_MODEL = "google/gemini-2.5-flash";
+const DEFAULT_MODEL = "google/gemini-3.5-flash-lite";
 const TIMEOUT_MS = 15_000;
 
 export async function classifyLead(
