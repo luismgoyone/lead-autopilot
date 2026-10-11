@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pinecrest Dental • Lead Autopilot Live Inquiry Log</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Newsreader & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-container": "#4e5752",
+            "inverse-primary": "#a0d1c0",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed": "#151d1a",
+            "primary-fixed-dim": "#a0d1c0",
+            "primary-fixed": "#bceddc",
+            "on-tertiary-fixed-variant": "#404944",
+            "on-tertiary-container": "#c3ccc6",
+            "on-surface-variant": "#404945",
+            "outline-variant": "#c0c8c4",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-high": "#deeaf2",
+            "surface-container": "#e4f0f8",
+            "on-primary-container": "#a3d4c3",
+            "inverse-surface": "#273238",
+            "surface": "#f4faff",
+            "on-error": "#ffffff",
+            "tertiary-fixed": "#dce5df",
+            "error": "#ba1a1a",
+            "secondary": "#9b442a",
+            "on-background": "#121d23",
+            "surface-bright": "#f4faff",
+            "primary": "#154539",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#fd9071",
+            "inverse-on-surface": "#e7f2fb",
+            "surface-dim": "#d0dce4",
+            "on-secondary-fixed": "#3b0900",
+            "on-primary-fixed": "#002019",
+            "secondary-fixed-dim": "#ffb5a0",
+            "surface-container-highest": "#d8e4ec",
+            "on-primary-fixed-variant": "#204f42",
+            "tertiary-fixed-dim": "#c0c9c3",
+            "on-tertiary": "#ffffff",
+            "on-error-container": "#93000a",
+            "tertiary": "#37403c",
+            "surface-variant": "#d8e4ec",
+            "on-secondary-container": "#752811",
+            "background": "#f4faff",
+            "outline": "#717975",
+            "on-secondary-fixed-variant": "#7c2d15",
+            "error-container": "#ffdad6",
+            "primary-container": "#2f5d50",
+            "on-surface": "#121d23",
+            "secondary-fixed": "#ffdbd1",
+            "surface-tint": "#396759",
+            "surface-container-low": "#e9f5fd"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "3rem",
+            "gutter-sm": "1rem",
+            "margin-sm": "1.25rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Newsreader"],
+            "label-lg": ["Inter"],
+            "body-md": ["Inter"],
+            "body-sm": ["Inter"],
+            "headline-sm": ["Newsreader"],
+            "headline-md": ["Newsreader"],
+            "title-md": ["Inter"],
+            "label-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "display-lg-mobile": ["Newsreader"],
+            "body-lg": ["Inter"],
+            "display-lg": ["Newsreader"],
+            "headline-lg-mobile": ["Newsreader"]
+          },
+          "fontSize": {
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "500" }],
+            "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "title-md": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "display-lg": ["52px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+      vertical-align: middle;
+    }
+    /* Soft ambient elevation for inquiry and live sheet */
+    .shadow-ambient {
+      box-shadow: 0 12px 32px -8px rgba(31, 42, 48, 0.08);
+    }
+    .shadow-card-hover {
+      box-shadow: 0 16px 36px -6px rgba(31, 42, 48, 0.12);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md selection:bg-secondary-fixed selection:text-secondary">
+<!-- TOP NAVIGATION (Docked TopNavBar from Shared Blueprint) -->
+<header class="bg-surface/90 backdrop-blur-md text-primary docked full-width top-0 sticky z-50 shadow-sm border-b border-primary/10 transition-all duration-200 ease-in-out">
+<div class="flex justify-between items-center w-full px-margin-sm md:px-margin max-w-[1200px] mx-auto py-space-sm">
+<!-- Brand & Demo Badge -->
+<div class="flex items-center gap-space-md">
+<a class="flex items-center gap-3 group" href="#">
+<img alt="Pinecrest Dental Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wct2o1wSNl4bEBMseVkLDecDgvBdsG0yVuLlf5KJTpca4NnRcRDD4EznMcIJraq_k8I5Rfmu5kHoukIiUVqwkOM9FqKtCZ8CEqU_2RAbvaIW5bo89pEJJJdrNwQiuiP7lcXOCq6OlMLJsqrnw1bvxw-Z0uhnOwi4AIc2H6UhMPjtvYG2tRqwDkrbDazcYSW-M8wxxONc_wbY85pMY118JxdTI__sfStAINu-TzLZwXDxw_rLiHPAzNhktk"/>
+</a>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-tertiary-fixed text-primary border border-primary/15 tracking-wide">
+          Freelance Portfolio Demo
+        </span>
+</div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center space-x-6">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 text-label-md font-label-md" href="#services">
+          Services
+        </a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 text-label-md font-label-md" href="#hours">
+          Hours
+        </a>
+<!-- Active link: Live inquiry log -->
+<a class="text-primary font-semibold border-b-2 border-secondary pb-1 text-label-md font-label-md flex items-center gap-1.5" href="#inquiry-log">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse inline-block"></span>
+          Inquiry Log
+        </a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 text-label-md font-label-md" href="#case-study">
+          Case Study
+        </a>
+</nav>
+<!-- Trailing Action -->
+<div class="flex items-center gap-space-sm">
+<a class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-secondary-container transition-colors duration-200 shadow-sm" href="#test-inquiry-modal">
+<span class="material-symbols-outlined text-[17px] mr-1.5" data-icon="edit_note">edit_note</span>
+          Send a test inquiry
+        </a>
+</div>
+</div>
+</header>
+<!-- MAIN CANVAS -->
+<main class="w-full max-w-[1200px] mx-auto px-margin-sm md:px-margin pt-10 pb-space-xl space-y-12">
+<!-- PAGE HERO / INTRO -->
+<section class="space-y-6 pt-2">
+<!-- Breadcrumb Context Tag -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-tertiary-fixed/60 border border-primary/10 text-primary text-label-sm font-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
+        Pinecrest Dental • Lead Autopilot Demo • Live Stream
+      </div>
+<div class="max-w-3xl space-y-4">
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-primary tracking-tight">
+          Every inquiry, answered in under a minute
+        </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant leading-relaxed">
+          This is the clinic's inquiry log, updated live from Google Sheets. Names and emails are hidden. All data is made up.
+        </p>
+</div>
+<!-- 5-STEP PIPELINE VISUAL FLOW DIAGRAM -->
+<div class="w-full bg-surface-container-lowest border border-primary/10 rounded-xl p-space-md md:p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-3 mb-4 border-b border-outline-variant/30 text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider">
+<span class="flex items-center gap-1.5 text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]" data-icon="alt_route">alt_route</span>
+            Instant Lead Routing Pipeline
+          </span>
+<span class="hidden sm:inline text-tertiary">Real-time Webhook &amp; AI Guardrails</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-3 md:gap-2 relative items-center">
+<!-- Step 1 -->
+<div class="flex items-center md:flex-col md:text-center gap-3.5 p-3 rounded-lg bg-surface-container-low border border-outline-variant/40 hover:border-primary/30 transition-all">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]" data-icon="edit_note">edit_note</span>
+</div>
+<div>
+<div class="text-label-sm font-label-sm text-tertiary">Step 01</div>
+<div class="text-body-sm font-label-lg text-primary">Inquiry form</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-center md:flex-col md:text-center gap-3.5 p-3 rounded-lg bg-surface-container-low border border-outline-variant/40 hover:border-primary/30 transition-all">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div>
+<div class="text-label-sm font-label-sm text-tertiary">Step 02</div>
+<div class="text-body-sm font-label-lg text-primary">AI tags it</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-center md:flex-col md:text-center gap-3.5 p-3 rounded-lg bg-surface-container-low border border-outline-variant/40 hover:border-primary/30 transition-all">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]" data-icon="table_chart">table_chart</span>
+</div>
+<div>
+<div class="text-label-sm font-label-sm text-tertiary">Step 03</div>
+<div class="text-body-sm font-label-lg text-primary">Google Sheet</div>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex items-center md:flex-col md:text-center gap-3.5 p-3 rounded-lg bg-surface-container-low border border-outline-variant/40 hover:border-primary/30 transition-all">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]" data-icon="mark_email_read">mark_email_read</span>
+</div>
+<div>
+<div class="text-label-sm font-label-sm text-tertiary">Step 04</div>
+<div class="text-body-sm font-label-lg text-primary">Reply sent / held</div>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="flex items-center md:flex-col md:text-center gap-3.5 p-3 rounded-lg bg-surface-container-low border border-outline-variant/40 hover:border-primary/30 transition-all">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]" data-icon="notifications_active">notifications_active</span>
+</div>
+<div>
+<div class="text-label-sm font-label-sm text-tertiary">Step 05</div>
+<div class="text-body-sm font-label-lg text-primary">Owner alerted</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- STAT CHIPS ROW -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Metric 1: Median reply -->
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-primary/10 shadow-sm flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed/50 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]" data-icon="bolt">bolt</span>
+</div>
+<div>
+<div class="text-label-sm font-label-sm text-tertiary uppercase tracking-wide">Pace</div>
+<div class="text-headline-sm font-headline-sm text-primary mt-0.5">Median reply 48 sec</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Autonomous WhatsApp &amp; SMS confirmation</p>
+</div>
+</div>
+<!-- Metric 2: Accuracy -->
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-primary/10 shadow-sm flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<div class="text-label-sm font-label-sm text-tertiary uppercase tracking-wide">Accuracy</div>
+<div class="text-headline-sm font-headline-sm text-primary mt-0.5">18 of 20 test messages</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Tagged correctly (90% precision)</p>
+</div>
+</div>
+<!-- Metric 3: Safety Guardrail -->
+<div class="bg-surface-container-lowest p-5 rounded-xl border border-primary/10 shadow-sm flex items-start gap-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed/40 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]" data-icon="shield">shield</span>
+</div>
+<div>
+<div class="text-label-sm font-label-sm text-tertiary uppercase tracking-wide">Safety Guardrail</div>
+<div class="text-headline-sm font-headline-sm text-primary mt-0.5">3 held for approval</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">Severe clinical cases routed to dentist review</p>
+</div>
+</div>
+</section>
+<!-- SPREADSHEET LOG TABLE (Central Feature Component) -->
+<section class="bg-surface-container-lowest rounded-xl border border-primary/15 shadow-ambient overflow-hidden">
+<!-- Spreadsheet Top Toolbar -->
+<div class="px-space-md md:px-space-lg py-3.5 bg-surface-container border-b border-primary/10 flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-6 h-6 rounded bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[15px]" data-icon="lock">lock</span>
+</div>
+<div>
+<span class="text-body-sm font-label-md text-primary font-semibold">Read-only view • Synced live with Sheets (Demo Dataset)</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-lowest text-tertiary text-label-sm font-label-sm border border-outline-variant/40">
+<span class="w-2 h-2 rounded-full bg-emerald-600 inline-block animate-ping"></span>
+            Auto-refreshing: 15s
+          </span>
+<button class="p-1 rounded hover:bg-surface-container-high text-primary transition-colors" title="Reload Sheet">
+<span class="material-symbols-outlined text-[18px]" data-icon="refresh">refresh</span>
+</button>
+</div>
+</div>
+<!-- Quick Filter Pill Tabs -->
+<div class="px-space-md md:px-space-lg py-3 bg-surface-container-lowest border-b border-outline-variant/20 flex flex-wrap items-center gap-2">
+<span class="text-label-sm font-label-sm text-tertiary mr-1">Filter View:</span>
+<button class="px-3 py-1 rounded-full text-label-sm font-label-md bg-primary text-on-primary shadow-xs">
+          All (7)
+        </button>
+<button class="px-3 py-1 rounded-full text-label-sm font-label-md bg-tertiary-fixed text-primary hover:bg-surface-container-high transition-colors">
+          Sent automatically (4)
+        </button>
+<button class="px-3 py-1 rounded-full text-label-sm font-label-md bg-tertiary-fixed text-primary hover:bg-surface-container-high transition-colors">
+          Needs approval (2)
+        </button>
+<button class="px-3 py-1 rounded-full text-label-sm font-label-md bg-tertiary-fixed text-primary hover:bg-surface-container-high transition-colors">
+          Filtered spam (1)
+        </button>
+</div>
+<!-- Table Viewport -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-tertiary text-label-sm font-label-sm border-b border-outline-variant/30 uppercase tracking-wider">
+<th class="py-3 px-4 w-36">Date / Time</th>
+<th class="py-3 px-4 w-20">Name</th>
+<th class="py-3 px-4 min-w-[240px]">Message</th>
+<th class="py-3 px-4 w-32">Intent</th>
+<th class="py-3 px-4 w-28">Urgency</th>
+<th class="py-3 px-4 min-w-[220px]">Clinical Summary</th>
+<th class="py-3 px-4 w-44">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20 text-body-sm font-body-sm text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-secondary-fixed/10">
+<td class="py-3.5 px-4 font-label-sm text-on-surface-variant whitespace-nowrap">Today, 10:42 PM</td>
+<td class="py-3.5 px-4 font-semibold text-primary">M. S.</td>
+<td class="py-3.5 px-4 text-on-surface truncate max-w-xs font-mono text-[13px]" title="My tooth is broken and bleeding since last night...">
+                "My tooth is broken and bleeding since last night..."
+              </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-red-100 text-error border border-error/20">
+                  Emergency
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-label-sm font-semibold bg-red-50 text-error">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> High
+                </span>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-medium">Broken bleeding tooth, wants emergency slot</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-md bg-amber-100 text-amber-800 border border-amber-300">
+<span class="material-symbols-outlined text-[14px]" data-icon="hourglass_top">hourglass_top</span>
+                  Needs approval
+                </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-label-sm text-on-surface-variant whitespace-nowrap">Today, 9:15 PM</td>
+<td class="py-3.5 px-4 font-semibold text-primary">J. d. C.</td>
+<td class="py-3.5 px-4 text-on-surface truncate max-w-xs font-mono text-[13px]" title="Nobody called me back after my visit last Thursday...">
+                "Nobody called me back after my visit last Thursday..."
+              </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-primary border border-outline-variant/30">
+                  Question
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-label-sm font-semibold bg-amber-50 text-amber-800">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span> Medium
+                </span>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-medium">Unresolved callback follow-up</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-md bg-amber-100 text-amber-800 border border-amber-300">
+<span class="material-symbols-outlined text-[14px]" data-icon="hourglass_top">hourglass_top</span>
+                  Needs approval
+                </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-label-sm text-on-surface-variant whitespace-nowrap">Today, 8:03 PM</td>
+<td class="py-3.5 px-4 font-semibold text-primary">L. M.</td>
+<td class="py-3.5 px-4 text-on-surface truncate max-w-xs font-mono text-[13px]" title="Pwede po ba bukas ng 9am magpa-cleaning?...">
+                "Pwede po ba bukas ng 9am magpa-cleaning?..."
+              </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-tertiary-fixed text-primary border border-primary/20">
+                  Booking (Tagalog)
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-label-sm font-semibold bg-emerald-50 text-emerald-800">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Low
+                </span>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-medium">Saturday morning cleaning request (Tagalog)</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-md bg-emerald-100 text-emerald-900 border border-emerald-300">
+<span class="material-symbols-outlined text-[14px]" data-icon="check">check</span>
+                  Sent in 42s
+                </span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-label-sm text-on-surface-variant whitespace-nowrap">Today, 6:30 PM</td>
+<td class="py-3.5 px-4 font-semibold text-primary">B. T.</td>
+<td class="py-3.5 px-4 text-on-surface truncate max-w-xs font-mono text-[13px]" title="How much are dental braces for teens?...">
+                "How much are dental braces for teens?..."
+              </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-primary border border-outline-variant/30">
+                  Pricing
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-label-sm font-semibold bg-emerald-50 text-emerald-800">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Low
+                </span>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-medium">Orthodontics fee estimate</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-md bg-emerald-100 text-emerald-900 border border-emerald-300">
+<span class="material-symbols-outlined text-[14px]" data-icon="check">check</span>
+                  Sent in 51s
+                </span>
+</td>
+</tr>
+<!-- Row 5 (Spam filtered) -->
+<tr class="hover:bg-surface-container-low/60 transition-colors opacity-75 bg-surface-container-high/40">
+<td class="py-3.5 px-4 font-label-sm text-on-surface-variant whitespace-nowrap">Today, 4:15 PM</td>
+<td class="py-3.5 px-4 font-semibold text-tertiary">K. R.</td>
+<td class="py-3.5 px-4 text-tertiary truncate max-w-xs font-mono text-[13px]" title="Earn $5,000 working from home click link...">
+                "Earn $5,000 working from home click link..."
+              </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-variant text-tertiary border border-outline/20">
+                  Spam
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-label-sm font-semibold bg-gray-100 text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span> None
+                </span>
+</td>
+<td class="py-3.5 px-4 text-tertiary italic">Automated marketing spam (quarantined)</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-md bg-surface-variant text-tertiary border border-outline/20">
+<span class="material-symbols-outlined text-[14px]" data-icon="block">block</span>
+                  No reply / Spam blocked
+                </span>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-4 font-label-sm text-on-surface-variant whitespace-nowrap">Today, 1:20 PM</td>
+<td class="py-3.5 px-4 font-semibold text-primary">A. P.</td>
+<td class="py-3.5 px-4 text-on-surface truncate max-w-xs font-mono text-[13px]" title="Do you accept PhilHealth or Maxicare HMO?...">
+                "Do you accept PhilHealth or Maxicare HMO?..."
+              </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container text-primary border border-outline-variant/30">
+                  Insurance
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-label-sm font-semibold bg-emerald-50 text-emerald-800">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Low
+                </span>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-medium">HMO policy inquiry</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-md bg-emerald-100 text-emerald-900 border border-emerald-300">
+<span class="material-symbols-outlined text-[14px]" data-icon="check">check</span>
+                  Sent in 38s
+                </span>
+</td>
+</tr>
+<!-- Row 7 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors bg-secondary-fixed/10">
+<td class="py-3.5 px-4 font-label-sm text-on-surface-variant whitespace-nowrap">Yesterday, 11:05 PM</td>
+<td class="py-3.5 px-4 font-semibold text-primary">R. V.</td>
+<td class="py-3.5 px-4 text-on-surface truncate max-w-xs font-mono text-[13px]" title="Severe throbbing pain in lower jaw...">
+                "Severe throbbing pain in lower jaw..."
+              </td>
+<td class="py-3.5 px-4">
+<span class="inline-flex px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-red-100 text-error border border-error/20">
+                  Emergency
+                </span>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-label-sm font-semibold bg-red-50 text-error">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> High
+                </span>
+</td>
+<td class="py-3.5 px-4 text-on-surface-variant font-medium">Acute pulpitis / emergency consultation</td>
+<td class="py-3.5 px-4 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-md bg-amber-100 text-amber-800 border border-amber-300">
+<span class="material-symbols-outlined text-[14px]" data-icon="hourglass_top">hourglass_top</span>
+                  Needs approval
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Bottom Metadata -->
+<div class="px-space-md py-3 bg-surface-container-low border-t border-outline-variant/30 flex flex-col sm:flex-row justify-between items-center text-label-sm font-label-sm text-on-surface-variant gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary" data-icon="verified_user">verified_user</span>
+<span>PII anonymized by strict data sanitization rules before public sheet rendering</span>
+</div>
+<div class="text-tertiary">Showing 7 of 7 log entries</div>
+</div>
+</section>
+<!-- BOTTOM CTA BAND (Signature Showcase Component) -->
+<section class="bg-surface-container-lowest border border-primary/15 rounded-xl p-space-lg md:p-space-xl shadow-ambient relative overflow-hidden">
+<!-- Mountain pine subtle tone backdrop -->
+<div class="absolute -right-16 -top-16 w-64 h-64 bg-primary-fixed/30 rounded-full blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="space-y-2 text-center md:text-left max-w-xl">
+<h2 class="text-headline-md font-headline-md text-primary">
+            Experience the Lead Autopilot in action
+          </h2>
+<p class="text-body-md font-body-md text-on-surface-variant">
+            Submit a sample patient query right now to see the live spreadsheet append, AI classification, and auto-response trigger instantly.
+          </p>
+<div class="pt-2 flex items-center justify-center md:justify-start gap-1.5 text-label-sm font-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="shield">shield</span>
+            Safe sandboxed demo • No real SMS or emails are sent to actual patients
+          </div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto shrink-0">
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg hover:bg-secondary-container transition-all shadow-sm" href="#test-inquiry-modal">
+<span class="material-symbols-outlined text-[20px] mr-2" data-icon="edit_note">edit_note</span>
+            Try it — send a test inquiry
+          </a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-5 py-3 rounded-lg border border-primary/30 text-primary font-label-lg text-label-lg hover:bg-tertiary-fixed/40 transition-colors" href="#case-study">
+<span class="material-symbols-outlined text-[20px] mr-2" data-icon="menu_book">menu_book</span>
+            Read the case study
+          </a>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER (Shared Footer from JSON Blueprint) -->
+<footer class="bg-primary text-on-primary w-full pt-space-xl pb-space-lg border-t border-primary-container">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-sm md:px-margin max-w-[1200px] mx-auto gap-space-md">
+<!-- Brand & Highlands Lore -->
+<div class="space-y-2 text-center md:text-left">
+<div class="flex items-center justify-center md:justify-start gap-2">
+<span class="font-headline-md text-headline-md font-medium text-on-primary tracking-tight">Pinecrest Dental</span>
+<span class="text-xs bg-primary-container px-2 py-0.5 rounded text-on-primary-container">Baguio City</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-primary-container max-w-md">
+          © 2024 Pinecrest Dental Clinic. Baguio City Highlands. Fictional demo clinic for conceptual presentation.
+        </p>
+</div>
+<!-- Links from JSON -->
+<div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-label-sm font-label-sm">
+<a class="text-on-primary-container hover:text-secondary-fixed transition-colors duration-200" href="#services">
+          Services
+        </a>
+<a class="text-on-primary-container hover:text-secondary-fixed transition-colors duration-200" href="#hours">
+          Hours &amp; Directions
+        </a>
+<a class="text-on-primary-container hover:text-secondary-fixed transition-colors duration-200" href="#team">
+          Team &amp; Philosophy
+        </a>
+<a class="text-on-primary-container hover:text-secondary-fixed transition-colors duration-200" href="#emergency">
+          Emergency Care
+        </a>
+<a class="text-on-primary-container hover:text-secondary-fixed transition-colors duration-200" href="#privacy">
+          Patient Privacy
+        </a>
+</div>
+</div>
+</footer>
+</body></html>

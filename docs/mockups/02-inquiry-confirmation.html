@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inquiry Received — Pinecrest Dental Demo</title>
+<!-- Google Fonts: Newsreader & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Forms and Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-container": "#c3ccc6",
+            "secondary-fixed-dim": "#ffb5a0",
+            "on-surface-variant": "#404945",
+            "tertiary-fixed-dim": "#c0c9c3",
+            "primary-fixed-dim": "#a0d1c0",
+            "primary-fixed": "#bceddc",
+            "surface-container-highest": "#d8e4ec",
+            "inverse-surface": "#273238",
+            "surface-container-high": "#deeaf2",
+            "primary-container": "#2f5d50",
+            "surface-dim": "#d0dce4",
+            "outline": "#717975",
+            "on-tertiary-fixed": "#151d1a",
+            "on-tertiary": "#ffffff",
+            "surface-variant": "#d8e4ec",
+            "on-secondary": "#ffffff",
+            "inverse-primary": "#a0d1c0",
+            "error-container": "#ffdad6",
+            "on-tertiary-fixed-variant": "#404944",
+            "secondary-container": "#fd9071",
+            "on-secondary-container": "#752811",
+            "secondary": "#9b442a",
+            "inverse-on-surface": "#e7f2fb",
+            "surface-bright": "#f4faff",
+            "tertiary": "#37403c",
+            "on-secondary-fixed-variant": "#7c2d15",
+            "on-secondary-fixed": "#3b0900",
+            "tertiary-fixed": "#dce5df",
+            "background": "#f4faff",
+            "surface-container-lowest": "#ffffff",
+            "on-error": "#ffffff",
+            "secondary-fixed": "#ffdbd1",
+            "surface-tint": "#396759",
+            "tertiary-container": "#4e5752",
+            "on-primary-fixed-variant": "#204f42",
+            "on-primary-container": "#a3d4c3",
+            "on-primary-fixed": "#002019",
+            "surface-container-low": "#e9f5fd",
+            "outline-variant": "#c0c8c4",
+            "on-background": "#121d23",
+            "error": "#ba1a1a",
+            "surface-container": "#e4f0f8",
+            "surface": "#f4faff",
+            "primary": "#154539",
+            "on-primary": "#ffffff",
+            "on-error-container": "#93000a",
+            "on-surface": "#121d23"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "space-xl": "2.5rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "gutter": "1.5rem",
+            "margin-sm": "1.25rem",
+            "margin": "3rem",
+            "space-sm": "0.5rem",
+            "gutter-sm": "1rem"
+          },
+          "fontFamily": {
+            "headline-lg-mobile": ["Newsreader", "serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "label-lg": ["Inter", "sans-serif"],
+            "label-md": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "headline-md": ["Newsreader", "serif"],
+            "display-lg": ["Newsreader", "serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "headline-lg": ["Newsreader", "serif"],
+            "headline-sm": ["Newsreader", "serif"],
+            "display-lg-mobile": ["Newsreader", "serif"],
+            "title-md": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "label-lg": ["15px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "label-md": ["13px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "display-lg": ["52px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "500" }],
+            "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "title-md": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-mist-bg {
+      background-color: #F4F1EA;
+    }
+    .highland-shadow {
+      box-shadow: 0 12px 32px -8px rgba(31, 42, 48, 0.08);
+    }
+    .highland-card-shadow {
+      box-shadow: 0 16px 36px -6px rgba(31, 42, 48, 0.06);
+    }
+  </style>
+</head>
+<body class="custom-mist-bg text-on-surface antialiased min-h-screen flex flex-col font-body-md selection:bg-primary-fixed selection:text-primary">
+<!-- TOP APP BAR (from Shared Components JSON specifications) -->
+<header class="bg-surface/90 dark:bg-surface/90 backdrop-blur-md text-primary dark:text-primary-fixed docked full-width top-0 sticky z-50 shadow-sm border-b border-primary/10 dark:border-outline-variant/20">
+<div class="flex justify-between items-center w-full px-margin-sm md:px-margin max-w-[1200px] mx-auto py-space-sm">
+<!-- Brand Logo & Demo Badge -->
+<div class="flex items-center gap-3">
+<a class="flex items-center gap-2.5 focus:outline-none" href="#">
+<img alt="Pinecrest Dental" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wct2o1wSNl4bEBMseVkLDecDgvBdsG0yVuLlf5KJTpca4NnRcRDD4EznMcIJraq_k8I5Rfmu5kHoukIiUVqwkOM9FqKtCZ8CEqU_2RAbvaIW5bo89pEJJJdrNwQiuiP7lcXOCq6OlMLJsqrnw1bvxw-Z0uhnOwi4AIc2H6UhMPjtvYG2tRqwDkrbDazcYSW-M8wxxONc_wbY85pMY118JxdTI__sfStAINu-TzLZwXDxw_rLiHPAzNhktk"/>
+</a>
+<div class="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed border border-secondary/20">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm tracking-wide">Demo practice</span>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav aria-label="Main Navigation" class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 font-label-md text-label-md" href="#">Services</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 font-label-md text-label-md" href="#">Hours</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200 font-label-md text-label-md" href="#">About Team</a>
+<a class="text-primary dark:text-primary-fixed font-semibold border-b-2 border-secondary pb-1 transition-colors duration-200 font-label-md text-label-md" href="#">Contact</a>
+</nav>
+<!-- Trailing Action Buttons -->
+<div class="flex items-center gap-3">
+<button class="hidden sm:inline-flex items-center text-primary font-medium hover:bg-tertiary-fixed/60 px-3 py-1.5 rounded-lg text-label-md font-label-md transition-colors duration-200" type="button">
+          Demo Practice
+        </button>
+<button class="inline-flex items-center justify-center bg-secondary hover:bg-on-secondary-container text-on-secondary font-medium px-4 py-2 rounded-lg text-label-md font-label-md shadow-sm transition-all duration-200" type="button">
+          Schedule Visit
+        </button>
+</div>
+</div>
+</header>
+<!-- MAIN CANVAS: Inquiry Confirmation & Lead Autopilot Breakdown -->
+<main class="flex-grow py-space-xl px-margin-sm md:px-margin">
+<div class="max-w-4xl mx-auto space-y-8">
+<!-- Breadcrumb indicator -->
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+<a class="hover:text-primary transition-colors" href="#">Pinecrest Highlands Clinic</a>
+<span>/</span>
+<span class="text-primary font-semibold">Inquiry Confirmation #PDC-8492</span>
+</div>
+<!-- CARD 1: Patient Confirmation Notice (Pure White elevated Highland signature card) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg md:p-space-xl highland-shadow border border-white">
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 md:gap-6">
+<!-- Pine green circular checkmark badge -->
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-4xl" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Main confirmation text -->
+<div class="flex-1 space-y-1.5">
+<div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-primary text-label-sm font-label-sm mb-1">
+<span class="material-symbols-outlined text-[14px]">format_image_left</span>
+<span>Patient Request Logged</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+              Thanks, Maria — we got your message.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+              A reply is on its way to <strong class="text-on-surface font-semibold">maria@example.com</strong>.
+            </p>
+</div>
+</div>
+<!-- Friendly Highland clinical reassurance note -->
+<div class="mt-6 pt-5 border-t border-primary/10 flex items-start gap-3 bg-tertiary-fixed/40 p-4 rounded-lg">
+<span class="material-symbols-outlined text-secondary mt-0.5 text-xl">vital_signs</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+<span class="font-semibold text-secondary">Immediate Highland Triage:</span> Because this is an urgent inquiry, <strong class="text-primary font-medium">Dr. Andrea Reyes</strong> and our team were immediately alerted to prepare the operatory for your comfort.
+          </p>
+</div>
+</section>
+<!-- CARD 2: "Behind the scenes: what Lead Autopilot did" Showcase Panel -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg md:p-space-xl highland-card-shadow border border-tertiary-fixed">
+<!-- Showcase Header & Portfolio Badge -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-6 border-b border-primary/10">
+<div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm tracking-wider uppercase mb-2">
+<span class="material-symbols-outlined text-[14px]">smart_toy</span>
+              Demo Portfolio Showcase
+            </div>
+<h2 class="font-headline-md text-headline-md text-primary">
+              Behind the scenes: what Lead Autopilot did
+            </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-2xl">
+              An interactive inspection breakdown demonstrating how Pinecrest Dental’s AI receptionist pipeline triaged Maria's urgent submission in 2.3 seconds with complete clinical safety.
+            </p>
+</div>
+<div class="flex items-center self-start md:self-auto gap-2 bg-primary/5 px-3 py-1.5 rounded-lg border border-primary/10">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
+</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Live Pipeline Run #8492</span>
+</div>
+</div>
+<div class="mt-8 space-y-8">
+<!-- 1. Submitted Inquiry Quote Block -->
+<div>
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant mb-2">
+<span class="flex items-center gap-1.5 text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+                Original Patient Submission
+              </span>
+<span>Payload: Form POST</span>
+</div>
+<div class="p-5 rounded-lg bg-surface-container-high/40 border border-primary/10 relative">
+<span class="material-symbols-outlined absolute top-4 right-4 text-primary/15 text-4xl select-none">format_quote</span>
+<blockquote class="font-headline-sm text-headline-sm text-on-surface italic pr-8">
+                “My tooth is broken and bleeding since last night. Can someone see me today?”
+              </blockquote>
+<div class="mt-4 pt-3 border-t border-primary/10 flex flex-wrap items-center justify-between text-body-sm font-body-sm text-on-surface-variant gap-2">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-primary">Maria Santos</span>
+<span>·</span>
+<span>Phone: (0917) 000-0000</span>
+</div>
+<div class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Received just now (0.0s)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. AI Analysis & Tag Chips + Triage Summary Bento -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+<!-- AI Analysis Chips (5 cols) -->
+<div class="md:col-span-5 p-5 rounded-lg bg-tertiary-fixed/30 border border-primary/10 flex flex-col justify-between space-y-4">
+<div>
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider block mb-3">
+                  Autonomous Classification
+                </span>
+<div class="space-y-3">
+<!-- Tag Intent -->
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Intent Tag:</span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md border border-secondary/20">
+<span class="material-symbols-outlined text-[14px]">e911_emergency</span>
+                      Emergency
+                    </span>
+</div>
+<!-- Tag Urgency -->
+<div class="flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Urgency Level:</span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-container/40 text-on-secondary-container font-label-md text-label-md border border-secondary/30">
+<span class="material-symbols-outlined text-[14px]">priority_high</span>
+                      High (Same-Day)
+                    </span>
+</div>
+</div>
+</div>
+<!-- Confidence Progress Bar -->
+<div class="pt-3 border-t border-primary/10">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Confidence Score</span>
+<span class="font-label-md text-label-md font-bold text-primary">0.93 (93%)</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2.5 overflow-hidden">
+<div class="bg-primary-container h-2.5 rounded-full" style="width: 93%;"></div>
+</div>
+<span class="text-[11px] text-on-surface-variant mt-1.5 block">Threshold for autonomous routing passed (&gt; 0.70)</span>
+</div>
+</div>
+<!-- AI Triage Summary Box (7 cols) -->
+<div class="md:col-span-7 p-5 rounded-lg bg-surface-container-low border border-primary/15 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-xl">psychology</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Clinical Triage Synthesis</span>
+</div>
+<div class="bg-white p-3.5 rounded-lg border border-primary/10 shadow-xs mb-3">
+<p class="font-title-md text-title-md text-primary font-medium leading-snug">
+                    “Broken, bleeding tooth since last night; wants a same-day visit.”
+                  </p>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Clinical parameters detected: Acute dental trauma with bleeding presentation. Schedule matching suggests reserve slot: <strong class="text-on-surface">Operatory 2 (2:00 PM)</strong>.
+                </p>
+</div>
+<div class="pt-3 mt-2 border-t border-primary/10 flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span>Model: Lead-Dental-v4.2</span>
+<span class="text-primary">Latency: 1,412ms</span>
+</div>
+</div>
+</div>
+<!-- 3. Draft Reply Box with Sage Green Container -->
+<div class="p-6 rounded-lg bg-tertiary-fixed/60 border border-primary/20 space-y-4">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+<span class="font-headline-sm text-headline-sm text-primary">
+                  Draft generated by Lead Autopilot
+                </span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+                Proposed Channel: SMS &amp; Email
+              </span>
+</div>
+<!-- The Draft Text Body -->
+<div class="bg-surface-container-lowest p-5 rounded-lg border border-primary/15 font-body-md text-body-md text-on-surface leading-relaxed shadow-sm">
+<p>“Hi Maria, sorry to hear about the pain. We can see you today at 2 PM. Does that work? If the bleeding gets worse, please call us at (074) 555-0142.”</p>
+</div>
+<!-- Status Pill & Guardrail Rule Card -->
+<div class="space-y-3 pt-2">
+<!-- Status Pill -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed border border-secondary/30">
+<span class="material-symbols-outlined text-[16px] text-secondary">pending_actions</span>
+<span class="font-label-md text-label-md font-semibold">
+                  Needs approval — Dr. Reyes will review this reply before it's sent
+                </span>
+</div>
+<!-- Guardrail Explanation Box -->
+<div class="p-4 rounded-lg bg-surface-container-lowest/80 border border-primary/10 text-body-sm text-body-sm text-on-surface-variant space-y-1">
+<div class="flex items-center gap-1.5 font-semibold text-primary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Safety Guardrail Policy Enforced</span>
+</div>
+<p class="leading-relaxed">
+                  Lead Autopilot requires human clinical sign-off whenever urgency is <strong class="text-secondary font-semibold">High</strong>, intent is <strong class="text-secondary font-semibold">Emergency</strong>, or AI confidence falls below <strong class="text-primary font-semibold">0.70</strong>. No automated medical promises are sent without a doctor's review.
+                </p>
+</div>
+</div>
+</div>
+<!-- 4. 5-Step Horizontal Timeline with checkmarks and timestamps -->
+<div>
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">
+                Execution Telemetry Pipeline
+              </h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total automated time: 2.3 seconds</span>
+</div>
+<!-- Responsive Step Timeline -->
+<div class="grid grid-cols-1 sm:grid-cols-5 gap-3 relative">
+<!-- Step 1 -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest border border-primary/15 relative overflow-hidden">
+<div class="flex items-center justify-between mb-1.5">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center text-xs">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">0.0s</span>
+</div>
+<div class="font-title-md text-body-sm font-semibold text-primary">Form received</div>
+<div class="text-[12px] text-on-surface-variant mt-0.5">Highland Webhook</div>
+</div>
+<!-- Step 2 -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest border border-primary/15 relative overflow-hidden">
+<div class="flex items-center justify-between mb-1.5">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center text-xs">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1.4s</span>
+</div>
+<div class="font-title-md text-body-sm font-semibold text-primary">AI tagged</div>
+<div class="text-[12px] text-on-surface-variant mt-0.5">Emergency / Urgency</div>
+</div>
+<!-- Step 3 -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest border border-primary/15 relative overflow-hidden">
+<div class="flex items-center justify-between mb-1.5">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center text-xs">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2.1s</span>
+</div>
+<div class="font-title-md text-body-sm font-semibold text-primary">Saved to Sheet</div>
+<div class="text-[12px] text-on-surface-variant mt-0.5">Google Sheets Row #142</div>
+</div>
+<!-- Step 4 -->
+<div class="p-3.5 rounded-lg bg-surface-container-lowest border border-primary/15 relative overflow-hidden">
+<div class="flex items-center justify-between mb-1.5">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center text-xs">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2.3s</span>
+</div>
+<div class="font-title-md text-body-sm font-semibold text-primary">Owner alerted</div>
+<div class="text-[12px] text-on-surface-variant mt-0.5">Discord #staff-urgent</div>
+</div>
+<!-- Step 5 (Current Pulse / Waiting) -->
+<div class="p-3.5 rounded-lg bg-secondary-fixed/40 border-2 border-secondary/40 relative overflow-hidden shadow-xs">
+<div class="flex items-center justify-between mb-1.5">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center text-xs animate-pulse">
+<span class="material-symbols-outlined text-[14px]">hourglass_top</span>
+</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Active</span>
+</div>
+<div class="font-title-md text-body-sm font-semibold text-on-secondary-fixed">Waiting for approval</div>
+<div class="text-[12px] text-on-secondary-fixed-variant mt-0.5">Dr. Reyes review queue</div>
+</div>
+</div>
+</div>
+<!-- 5. Action Buttons -->
+<div class="pt-6 border-t border-primary/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3 w-full sm:w-auto">
+<!-- Primary Pine Action Button -->
+<a class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-container text-on-primary font-medium px-5 py-2.5 rounded-lg text-label-md font-label-md transition-all duration-200 shadow-sm w-full sm:w-auto" href="#">
+<span>View the inquiry log</span>
+<span class="material-symbols-outlined text-[18px]">table_chart</span>
+</a>
+<!-- Ghost / Outline Button -->
+<a class="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-tertiary-fixed text-primary font-medium px-5 py-2.5 rounded-lg text-label-md font-label-md border border-primary/30 transition-all duration-200 w-full sm:w-auto" href="#">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+<span>Send another inquiry</span>
+</a>
+</div>
+<!-- External Demo Mode Pill -->
+<div class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Interactive Lead Autopilot Simulation</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Highland Context Note -->
+<div class="text-center font-body-sm text-body-sm text-on-surface-variant/80 py-2">
+<p>Questions or need immediate emergency directions in Baguio City? Call the clinic reception desk directly at <span class="font-semibold text-primary">(074) 555-0142</span>.</p>
+</div>
+</div>
+</main>
+<!-- FOOTER (Exact implementation from Shared Components JSON) -->
+<footer class="bg-primary dark:bg-inverse-surface text-on-primary dark:text-inverse-on-surface w-full pt-space-xl pb-space-lg border-t border-primary-container dark:border-outline/20">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-sm md:px-margin max-w-[1200px] mx-auto gap-space-md">
+<!-- Brand & Copyright -->
+<div class="space-y-2 text-center md:text-left">
+<div class="font-headline-md text-headline-md font-medium text-on-primary dark:text-inverse-on-surface tracking-tight">
+          Pinecrest Dental
+        </div>
+<p class="font-body-sm text-body-sm text-on-primary-container dark:text-surface-variant max-w-md">
+          © 2024 Pinecrest Dental Clinic. Baguio City Highlands. Fictional demo clinic for conceptual presentation.
+        </p>
+<p class="font-label-sm text-label-sm text-secondary-fixed pt-1">
+          Demo built with Lead Autopilot · Intelligent Reception Architecture
+        </p>
+</div>
+<!-- Footer Navigation Links -->
+<nav aria-label="Footer Navigation" class="flex flex-wrap items-center justify-center md:justify-end gap-x-6 gap-y-2 text-body-sm font-body-sm">
+<a class="text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#">Services</a>
+<a class="text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#">Hours &amp; Directions</a>
+<a class="text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#">Team &amp; Philosophy</a>
+<a class="text-secondary-fixed dark:text-secondary-fixed-dim font-medium underline hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#">Emergency Care</a>
+<a class="text-on-primary-container dark:text-surface-variant hover:text-secondary-fixed dark:hover:text-secondary-fixed-dim transition-colors duration-200" href="#">Patient Privacy</a>
+</nav>
+</div>
+</footer>
+</body></html>
