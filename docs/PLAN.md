@@ -83,9 +83,9 @@ Keys go in `.env.local` and Vercel's environment variables (see `.env.example`).
 - [x] One row per inquiry from the API route
 
 **Phase 5: Replies and alerts**
-- [ ] Routine: send the drafted reply right away via Resend
-- [ ] Urgent or unclear: mark "Needs approval", send nothing yet
-- [ ] Send every inquiry to the owner's Discord or Slack
+- [x] Routine: send the drafted reply right away via Resend
+- [x] Urgent or unclear: mark "Needs approval", send nothing yet
+- [x] Send every inquiry to the owner's Discord or Slack
 
 **Phase 6: Owner dashboard**
 - [ ] Password-protected page listing inquiries with their tags
