@@ -18,4 +18,4 @@ Open http://localhost:3000.
 
 ## Stack
 
-Next.js, TypeScript, Tailwind CSS, Vercel, AI SDK + AI Gateway (Gemini, swappable to Claude), Google Sheets, Resend, Discord/Slack webhooks, Cloudflare Turnstile.
+Next.js, TypeScript, Tailwind CSS, Vercel, AI SDK (Gemini, swappable to Claude), Google Sheets, Resend, Discord/Slack webhooks, Cloudflare Turnstile.

@@ -51,7 +51,7 @@ If the AI step fails, the inquiry is still saved, the owner is alerted and the p
 | --- | --- | --- |
 | GitHub | Stores the code | Repo `lead-autopilot` |
 | Vercel | Hosts the site and API route | Connect it to the repo |
-| Vercel AI Gateway | Tags inquiries and drafts replies (Gemini now, Claude later) | An AI Gateway API key for local dev |
+| Google AI Studio (Gemini) | Tags inquiries and drafts replies (swappable to Claude via `AI_MODEL`) | A free API key |
 | Google Cloud | Lets the code write to Sheets | A service account and its JSON key |
 | Google Sheets | The clinic's inquiry log | A sheet shared with the service account's email |
 | Resend | Sends reply emails | An API key |
@@ -74,7 +74,7 @@ Keys go in `.env.local` and Vercel's environment variables (see `.env.example`).
 - [x] API route `/api/inquiry` that receives the form and returns a success message
 
 **Phase 3: The AI step**
-- [ ] `classifyLead()` in its own file, calling the model through AI Gateway (`AI_MODEL`)
+- [ ] `classifyLead()` in its own file, calling the model set in `AI_MODEL` via the AI SDK
 - [ ] Return the JSON shape in AI design below
 - [ ] Run the 20 sample messages and fix the prompt until the tags look right
 
@@ -135,7 +135,7 @@ The AI always answers in one JSON shape, enforced with a Zod schema via the AI S
 - **Spam protection:** Cloudflare Turnstile plus a hidden honeypot field.
 - **Rate limit:** at most 5 submissions per visitor per hour.
 - **Secrets:** API keys only in environment variables, never in code or the browser.
-- **Demo data only:** use fake data in the demo. For a paying client, pick a model and provider with zero data retention.
+- **Demo data only:** the free Gemini tier may train on inputs, so use fake data. For a paying client, switch `AI_MODEL` to a paid model (e.g. Claude).
 - **Easy to swap:** all AI calls go through `classifyLead()`, and the model is one env var (`AI_MODEL`), so moving to Claude is a config change.
 
 ## Case study and launch

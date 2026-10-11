@@ -1,11 +1,15 @@
-import { generateText, Output } from "ai";
+import { anthropic } from "@ai-sdk/anthropic";
+import { google } from "@ai-sdk/google";
+import { createProviderRegistry, generateText, Output } from "ai";
 import { z } from "zod";
 import type { Inquiry } from "@/lib/inquiry";
 import { SYSTEM_PROMPT, buildUserPrompt } from "./prompt";
 
-// All AI calls go through this file. Requests route through Vercel AI Gateway,
-// so switching providers is just a different AI_MODEL, e.g.
-// "google/gemini-3.8-flash" → "anthropic/claude-sonnet-5.5".
+// All AI calls go through this file. The model is one env var, AI_MODEL, as
+// "provider/model". Switching to Claude means setting
+// AI_MODEL=anthropic/<model> and ANTHROPIC_API_KEY; no code changes.
+// Keys: GOOGLE_GENERATIVE_AI_API_KEY for google/*, ANTHROPIC_API_KEY for anthropic/*.
+const registry = createProviderRegistry({ google, anthropic }, { separator: "/" });
 
 export const classificationSchema = z.object({
   intent: z.enum(["booking", "pricing", "emergency", "question", "spam"]),
@@ -17,7 +21,7 @@ export const classificationSchema = z.object({
 
 export type Classification = z.infer<typeof classificationSchema>;
 
-const DEFAULT_MODEL = "google/gemini-3.8-flash";
+const DEFAULT_MODEL = "google/gemini-2.5-flash";
 const TIMEOUT_MS = 15_000;
 
 export async function classifyLead(
@@ -25,7 +29,9 @@ export async function classifyLead(
   receivedAt = new Date(),
 ): Promise<Classification> {
   const { output } = await generateText({
-    model: process.env.AI_MODEL || DEFAULT_MODEL,
+    model: registry.languageModel(
+      (process.env.AI_MODEL || DEFAULT_MODEL) as `google/${string}` | `anthropic/${string}`,
+    ),
     instructions: SYSTEM_PROMPT,
     prompt: buildUserPrompt(inquiry, receivedAt),
     output: Output.object({ schema: classificationSchema }),
