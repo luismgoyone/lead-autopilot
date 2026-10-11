@@ -65,7 +65,7 @@ Keys go in `.env.local` and Vercel's environment variables (see `.env.example`).
 **Phase 1: Project setup**
 - [x] Create a Next.js app with TypeScript and Tailwind CSS
 - [x] Add the Pinecrest colors and fonts to the Tailwind theme
-- [ ] Push to GitHub and deploy to Vercel
+- [x] Push to GitHub and deploy to Vercel
 
 **Phase 2: Clinic site and inquiry form**
 - [x] One-page Pinecrest Dental site: hero, services, hours, inquiry form
@@ -74,9 +74,9 @@ Keys go in `.env.local` and Vercel's environment variables (see `.env.example`).
 - [x] API route `/api/inquiry` that receives the form and returns a success message
 
 **Phase 3: The AI step**
-- [ ] `classifyLead()` in its own file, calling the model set in `AI_MODEL` via the AI SDK
-- [ ] Return the JSON shape in AI design below
-- [ ] Run the 20 sample messages and fix the prompt until the tags look right
+- [x] `classifyLead()` in its own file, calling the model set in `AI_MODEL` via the AI SDK
+- [x] Return the JSON shape in AI design below
+- [x] Run the 20 sample messages and fix the prompt until the tags look right
 
 **Phase 4: Google Sheets log**
 - [ ] Sheet columns: date, name, email, message, intent, urgency, summary, draft reply, status
