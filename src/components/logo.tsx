@@ -15,7 +15,7 @@ export function Logo({ light = false }: { light?: boolean }) {
   return (
     <span className="flex items-center gap-3">
       <LogoMark />
-      <span className={`font-display text-xl font-semibold ${light ? "text-white" : "text-slate"}`}>
+      <span className={`font-display text-lg font-semibold whitespace-nowrap sm:text-xl ${light ? "text-white" : "text-slate"}`}>
         Pinecrest <span className={`italic font-normal ${light ? "text-sage" : "text-pine"}`}>Dental</span>
       </span>
     </span>
