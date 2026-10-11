@@ -152,5 +152,5 @@ The AI always answers in one JSON shape, enforced with a Zod schema via the AI S
 
 **Portfolio updates:**
 - [ ] Lead Autopilot as the first project card, with a "Read case study" button
-- [ ] Public GitHub repo with a clear README and screenshots
+- [x] Public GitHub repo with a clear README and screenshots
 - [ ] Share the video on LinkedIn

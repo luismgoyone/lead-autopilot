@@ -42,9 +42,10 @@ export default function Home() {
           </nav>
           <a
             href="#inquiry"
-            className="rounded-lg bg-sunrise px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#d06a4d]"
+            className="shrink-0 rounded-lg bg-sunrise px-4 py-2.5 text-sm font-semibold whitespace-nowrap text-white hover:bg-[#d06a4d]"
           >
-            Send an inquiry
+            <span className="sm:hidden">Ask us</span>
+            <span className="hidden sm:inline">Send an inquiry</span>
           </a>
         </div>
       </header>
