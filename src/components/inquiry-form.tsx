@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { z } from "zod";
+import { InquiryResult, type InquiryResultData } from "@/components/inquiry-result";
+import { Turnstile, turnstileEnabled } from "@/components/turnstile";
 import {
   PREFERRED_TIMES,
   inquirySchema,
@@ -11,7 +13,7 @@ import {
 type Status =
   | { state: "idle" }
   | { state: "sending" }
-  | { state: "sent"; message: string }
+  | { state: "sent"; data: InquiryResultData }
   | { state: "error"; message: string };
 
 const inputClass =
@@ -21,6 +23,8 @@ export function InquiryForm() {
   const [status, setStatus] = useState<Status>({ state: "idle" });
   const [errors, setErrors] = useState<InquiryFieldErrors>({});
   const [preferredTime, setPreferredTime] = useState<string>("Any time");
+  const [token, setToken] = useState<string | null>(null);
+  const [turnstileKey, setTurnstileKey] = useState(0);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -33,15 +37,22 @@ export function InquiryForm() {
       return;
     }
     setErrors({});
+    if (turnstileEnabled && !token) {
+      setStatus({ state: "error", message: "Please complete the \"verify you are human\" check." });
+      return;
+    }
     setStatus({ state: "sending" });
 
     try {
       const res = await fetch("/api/inquiry", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(result.data),
+        body: JSON.stringify({ ...result.data, website: data.website, turnstileToken: token }),
       });
       const json = await res.json();
+      // Each Turnstile token works once, so get a fresh one after any attempt.
+      setToken(null);
+      setTurnstileKey((k) => k + 1);
       if (!res.ok || !json.ok) {
         setErrors(json.fieldErrors ?? {});
         setStatus({ state: "error", message: json.error ?? "Something went wrong." });
@@ -49,7 +60,7 @@ export function InquiryForm() {
       }
       form.reset();
       setPreferredTime("Any time");
-      setStatus({ state: "sent", message: json.message });
+      setStatus({ state: "sent", data: json });
     } catch {
       setStatus({
         state: "error",
@@ -59,19 +70,7 @@ export function InquiryForm() {
   }
 
   if (status.state === "sent") {
-    return (
-      <div role="status" className="py-10 text-center">
-        <p className="font-display text-3xl text-pine">Message received.</p>
-        <p className="mx-auto mt-3 max-w-md text-slate/80">{status.message}</p>
-        <button
-          type="button"
-          onClick={() => setStatus({ state: "idle" })}
-          className="mt-6 rounded-lg border border-pine/30 px-5 py-2.5 font-medium text-pine hover:bg-sage/50"
-        >
-          Send another inquiry
-        </button>
-      </div>
-    );
+    return <InquiryResult data={status.data} onReset={() => setStatus({ state: "idle" })} />;
   }
 
   return (
@@ -129,6 +128,7 @@ export function InquiryForm() {
       </div>
 
       <div className="flex flex-col gap-3 sm:col-span-2">
+        <Turnstile onToken={setToken} resetKey={turnstileKey} />
         {status.state === "error" && (
           <p role="alert" className="rounded-lg bg-sunrise/15 px-4 py-3 text-sm text-slate">
             {status.message}

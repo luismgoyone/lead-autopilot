@@ -38,6 +38,7 @@ export default function Home() {
             <a href="#services" className="hover:text-pine">Services</a>
             <a href="#hours" className="hover:text-pine">Hours</a>
             <a href="#inquiry" className="hover:text-pine">Contact</a>
+            <a href="/log" className="hover:text-pine">Inquiry log</a>
           </nav>
           <a
             href="#inquiry"
@@ -172,7 +173,9 @@ export default function Home() {
           </div>
           <p className="text-sm text-white/75">
             Pinecrest Dental is a demo business.{" "}
-            <span className="rounded bg-white/10 px-2 py-1">Built with Lead Autopilot</span>
+            <a href="/log" className="rounded bg-white/10 px-2 py-1 hover:bg-white/20">
+              Built with Lead Autopilot: see the live log
+            </a>
           </p>
         </div>
       </footer>

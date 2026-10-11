@@ -19,8 +19,6 @@ export const inquirySchema = z.object({
     .min(10, "Please tell us a little more (at least 10 characters).")
     .max(2000, "Please keep your message under 2000 characters."),
   preferredTime: z.enum(PREFERRED_TIMES),
-  // Honeypot: real visitors never see or fill this field.
-  website: z.string().max(0).optional().or(z.literal("")),
 });
 
 export type Inquiry = z.infer<typeof inquirySchema>;

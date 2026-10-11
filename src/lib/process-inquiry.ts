@@ -14,6 +14,8 @@ import {
 export type ProcessedInquiry = {
   row: InquiryRow;
   classification: Classification | null; // null when the AI step failed
+  // Seconds since the inquiry arrived when each step finished (for the demo view).
+  timings: { classified: number; saved: number; replied: number; alerted: number };
 };
 
 function statusFor(c: Classification): Status {
@@ -30,6 +32,7 @@ function statusFor(c: Classification): Status {
 // logged but never lose the inquiry.
 export async function processInquiry(inquiry: Inquiry): Promise<ProcessedInquiry> {
   const receivedAt = new Date();
+  const since = () => Math.round((Date.now() - receivedAt.getTime()) / 100) / 10;
 
   let classification: Classification | null = null;
   try {
@@ -37,6 +40,7 @@ export async function processInquiry(inquiry: Inquiry): Promise<ProcessedInquiry
   } catch (err) {
     console.error("classifyLead failed:", err);
   }
+  const classified = since();
 
   const row: InquiryRow = {
     id: randomUUID(),
@@ -55,6 +59,7 @@ export async function processInquiry(inquiry: Inquiry): Promise<ProcessedInquiry
   };
 
   const rowNumber = await appendInquiry(row);
+  const saved = since();
 
   try {
     if (row.status === STATUSES.readyToSend) {
@@ -67,6 +72,7 @@ export async function processInquiry(inquiry: Inquiry): Promise<ProcessedInquiry
   } catch (err) {
     console.error("Sending reply failed:", err);
   }
+  const replied = since();
 
   try {
     await alertOwner(row);
@@ -74,5 +80,5 @@ export async function processInquiry(inquiry: Inquiry): Promise<ProcessedInquiry
     console.error("Owner alert failed:", err);
   }
 
-  return { row, classification };
+  return { row, classification, timings: { classified, saved, replied, alerted: since() } };
 }
