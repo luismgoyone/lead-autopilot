@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pinecrest Dental | Baguio City Highlands</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed": "#bceddc",
+            "on-secondary-fixed-variant": "#7c2d15",
+            "secondary-fixed-dim": "#ffb5a0",
+            "on-tertiary-fixed-variant": "#404944",
+            "surface-container": "#e4f0f8",
+            "on-primary": "#ffffff",
+            "background": "#f4faff",
+            "on-error": "#ffffff",
+            "secondary-fixed": "#ffdbd1",
+            "tertiary-container": "#4e5752",
+            "surface-container-lowest": "#ffffff",
+            "inverse-primary": "#a0d1c0",
+            "tertiary": "#37403c",
+            "surface-bright": "#f4faff",
+            "error-container": "#ffdad6",
+            "tertiary-fixed": "#dce5df",
+            "primary": "#154539",
+            "error": "#ba1a1a",
+            "on-background": "#121d23",
+            "on-tertiary-fixed": "#151d1a",
+            "secondary-container": "#fd9071",
+            "surface-variant": "#d8e4ec",
+            "on-secondary-container": "#752811",
+            "surface": "#f4faff",
+            "primary-fixed-dim": "#a0d1c0",
+            "surface-container-high": "#deeaf2",
+            "primary-container": "#2f5d50",
+            "on-primary-fixed-variant": "#204f42",
+            "surface-dim": "#d0dce4",
+            "inverse-on-surface": "#e7f2fb",
+            "on-error-container": "#93000a",
+            "surface-container-highest": "#d8e4ec",
+            "outline-variant": "#c0c8c4",
+            "tertiary-fixed-dim": "#c0c9c3",
+            "on-tertiary-container": "#c3ccc6",
+            "on-surface-variant": "#404945",
+            "on-primary-container": "#a3d4c3",
+            "on-secondary-fixed": "#3b0900",
+            "surface-tint": "#396759",
+            "on-secondary": "#ffffff",
+            "on-surface": "#121d23",
+            "secondary": "#9b442a",
+            "outline": "#717975",
+            "on-primary-fixed": "#002019",
+            "surface-container-low": "#e9f5fd",
+            "on-tertiary": "#ffffff",
+            "inverse-surface": "#273238"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "margin-sm": "1.25rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "gutter-sm": "1rem",
+            "gutter": "1.5rem",
+            "space-xl": "2.5rem",
+            "margin": "3rem",
+            "space-lg": "1.5rem"
+          },
+          "fontFamily": {
+            "body-lg": ["Inter"],
+            "display-lg-mobile": ["Newsreader"],
+            "headline-lg-mobile": ["Newsreader"],
+            "headline-sm": ["Newsreader"],
+            "headline-md": ["Newsreader"],
+            "label-sm": ["Inter"],
+            "headline-lg": ["Newsreader"],
+            "display-lg": ["Newsreader"],
+            "body-sm": ["Inter"],
+            "title-md": ["Inter"],
+            "label-lg": ["Inter"],
+            "body-md": ["Inter"],
+            "label-md": ["Inter"]
+          },
+          "fontSize": {
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+            "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+            "headline-sm": ["22px", {"lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600"}],
+            "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+            "label-sm": ["11px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+            "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "500"}],
+            "display-lg": ["52px", {"lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "500"}],
+            "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "title-md": ["18px", {"lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "label-lg": ["15px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "label-md": ["13px", {"lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "600"}]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      display: inline-block;
+      text-transform: none;
+      letter-spacing: normal;
+      word-wrap: normal;
+      white-space: nowrap;
+      direction: ltr;
+      vertical-align: middle;
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+    }
+    .material-symbols-outlined[data-weight="fill"] {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex justify-center selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Mobile Viewport Frame (~390px layout) -->
+<div class="w-full max-w-[420px] bg-surface flex flex-col shadow-2xl relative min-h-screen overflow-x-hidden border-x border-primary/5">
+<!-- 1. Top Bar (Sticky Mobile Header) -->
+<header class="sticky top-0 z-40 bg-surface-container-low/95 backdrop-blur-md transition-colors duration-200 shadow-sm">
+<div class="flex justify-between items-center w-full px-4 h-16 max-w-7xl mx-auto">
+<!-- Logo & Brand identity -->
+<a class="flex items-center gap-2 group active:scale-95 transition-transform duration-150" href="#hero">
+<div class="h-9 w-9 rounded-lg bg-tertiary-fixed flex items-center justify-center p-1 border border-primary/10 overflow-hidden shadow-xs">
+<img alt="Pinecrest Dental" class="h-full w-full object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Wct2o1wSNl4bEBMseVkLDecDgvBdsG0yVuLlf5KJTpca4NnRcRDD4EznMcIJraq_k8I5Rfmu5kHoukIiUVqwkOM9FqKtCZ8CEqU_2RAbvaIW5bo89pEJJJdrNwQiuiP7lcXOCq6OlMLJsqrnw1bvxw-Z0uhnOwi4AIc2H6UhMPjtvYG2tRqwDkrbDazcYSW-M8wxxONc_wbY85pMY118JxdTI__sfStAINu-TzLZwXDxw_rLiHPAzNhktk"/>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md font-bold text-primary tracking-tight">Pinecrest Dental</span>
+<span class="font-label-sm text-label-sm bg-tertiary-fixed text-primary px-1.5 py-0.5 rounded-full border border-primary/10">Demo</span>
+</div>
+</a>
+<!-- Drawer Trigger Button -->
+<button aria-label="Open Navigation Menu" class="p-2 rounded-lg text-primary hover:bg-tertiary-fixed/30 active:scale-95 transition-transform duration-150 focus:outline-none" id="drawerOpenBtn">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+</div>
+</header>
+<!-- Side Navigation Drawer (Off-canvas) -->
+<div class="fixed inset-0 bg-inverse-surface/40 z-50 backdrop-blur-xs hidden transition-opacity duration-300 opacity-0" id="drawerOverlay"></div>
+<div class="fixed inset-y-0 right-0 w-72 z-50 bg-surface-container-low shadow-xl transform translate-x-full transition-transform duration-300 ease-out border-l border-primary/10 flex flex-col justify-between" id="navDrawer">
+<div class="p-6 space-y-5">
+<div class="flex items-center justify-between pb-3 border-b border-primary/10">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-weight="fill">dentistry</span>
+<span class="font-title-md text-title-md font-bold text-primary">Pinecrest Dental</span>
+</div>
+<button class="p-1 rounded-lg text-on-surface-variant hover:text-primary active:scale-95" id="drawerCloseBtn">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Navigation Drawer Items from Blueprint -->
+<nav class="flex flex-col space-y-1.5">
+<a class="flex items-center gap-3 px-4 py-3 bg-primary-fixed text-on-primary-fixed rounded-lg font-title-md text-title-md font-semibold" href="#hero">
+<span class="material-symbols-outlined text-[20px]" data-weight="fill">home</span>
+<span>Home</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg font-title-md text-title-md transition-colors" href="#services">
+<span class="material-symbols-outlined text-[20px]">medical_services</span>
+<span>Services</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg font-title-md text-title-md transition-colors" href="#hours">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+<span>Clinic Hours</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-primary/5 hover:text-primary rounded-lg font-title-md text-title-md transition-colors" href="#inquiry">
+<span class="material-symbols-outlined text-[20px]">contact_phone</span>
+<span>Contact &amp; Inquire</span>
+</a>
+</nav>
+</div>
+<div class="p-6 bg-surface-container border-t border-primary/10">
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-2">Highland Sanctuary Practice</p>
+<p class="font-body-sm text-body-sm text-primary font-medium">Session Rd Ext, Baguio City</p>
+</div>
+</div>
+<!-- Main Content Container -->
+<main class="flex-1 flex flex-col space-y-10 pb-8">
+<!-- 2. Hero Section -->
+<section class="px-4 pt-4 space-y-5" id="hero">
+<!-- Location Pill -->
+<div class="inline-flex items-center gap-1.5 bg-tertiary-fixed text-primary px-3 py-1 rounded-full border border-primary/10 shadow-xs">
+<span class="material-symbols-outlined text-[16px] text-primary" data-weight="fill">location_on</span>
+<span class="font-label-md text-label-md">Session Road Ext., Baguio City</span>
+</div>
+<!-- Headings -->
+<div class="space-y-2.5">
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-primary tracking-tight">
+            Gentle dental care in the City of Pines.
+          </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Message us any time — we reply in under a minute, day or night.
+          </p>
+</div>
+<!-- Interior Atmosphere Photo -->
+<div class="space-y-2">
+<div class="relative w-full rounded-2xl overflow-hidden shadow-md border border-primary/10 group">
+<img alt="Pinecrest Dental Operatory room overlooking pine trees in Baguio City" class="w-full h-56 object-cover object-center group-hover:scale-102 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1VE7uZgjNWltAzlMy2bjZuR-dDuz369QnhbOt2zIa9xrxKZg3g4rNHZQUT4FXNIFTkWvolG3tGgC-aQj7iusWEhR6em6RCcgc7_8t9gFObDq_IZX4MHgRvtjSSmnThqUEXdDeHPwcnE1zHwUmU0kNsbCc7dqKXRw7rN7Vy05CCGs75hpOT653hosU6y24M5fmyRIHK0N1s8dNOdX-pPnUdil6-BPODg8h5LnLDbjomdoEQ9rYOxH6DAowc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent pointer-events-none"></div>
+<div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-on-primary">
+<span class="font-label-sm text-label-sm font-semibold tracking-wide flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+                Fresh mountain atmosphere
+              </span>
+<span class="font-label-sm text-label-sm bg-primary/40 backdrop-blur-md px-2 py-0.5 rounded">Operatory A</span>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant italic px-1 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px] text-primary">forest</span>
+            Forest-Facing Operatory Suite • Filtered Benguet pine air
+          </p>
+</div>
+<!-- CTA Action Buttons -->
+<div class="space-y-2.5 pt-1">
+<!-- Primary Sunrise Button -->
+<a class="flex items-center justify-center gap-2 w-full py-3.5 px-6 rounded-lg bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg shadow-sm hover:shadow-md active:scale-98 transition-all duration-150" href="#inquiry">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Ask a question</span>
+</a>
+<!-- Pine Outline Secondary CTA Button -->
+<a class="flex items-center justify-center gap-2 w-full py-3 px-6 rounded-lg border border-primary/30 text-primary hover:bg-tertiary-fixed/40 font-label-lg text-label-lg active:scale-98 transition-all duration-150" href="tel:0745550142">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>Call (074) 555-0142</span>
+</a>
+</div>
+<!-- Trust Micro-Badges -->
+<div class="grid grid-cols-1 gap-2 pt-2">
+<div class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-tertiary-fixed/50 border border-primary/10">
+<span class="material-symbols-outlined text-primary text-[18px]" data-weight="fill">spa</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Warm blankets &amp; cool pine air</span>
+</div>
+<div class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-tertiary-fixed/50 border border-primary/10">
+<span class="material-symbols-outlined text-primary text-[18px]" data-weight="fill">sentiment_satisfied</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Gentle technique for nervous smiles</span>
+</div>
+<div class="flex items-center gap-2.5 px-3 py-2 rounded-xl bg-tertiary-fixed/50 border border-primary/10">
+<span class="material-symbols-outlined text-primary text-[18px]" data-weight="fill">radiology</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Modern low-radiation imaging</span>
+</div>
+</div>
+</section>
+<!-- 3. Services Section -->
+<section class="px-4 space-y-4" id="services">
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-primary tracking-widest font-semibold uppercase">OUR PRACTICES</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">
+            Calm, thoughtful dental care for all generations.
+          </h2>
+</div>
+<!-- Compact Stacked Sage Cards List -->
+<div class="space-y-3">
+<!-- Service 1: Cleanings -->
+<div class="p-4 rounded-xl bg-tertiary-fixed border border-surface-container-lowest/70 shadow-xs flex items-start gap-3.5 transition-transform duration-150 hover:-translate-y-0.5">
+<div class="h-10 w-10 shrink-0 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[22px]">dentistry</span>
+</div>
+<div class="space-y-0.5">
+<h3 class="font-headline-sm text-headline-sm text-primary">Cleanings &amp; Preventive Care</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Gentle scaling, highland fluoride polish, and gentle periodontal health checkups.</p>
+</div>
+</div>
+<!-- Service 2: Restorative Fillings -->
+<div class="p-4 rounded-xl bg-tertiary-fixed border border-surface-container-lowest/70 shadow-xs flex items-start gap-3.5 transition-transform duration-150 hover:-translate-y-0.5">
+<div class="h-10 w-10 shrink-0 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[22px]">medical_services</span>
+</div>
+<div class="space-y-0.5">
+<h3 class="font-headline-sm text-headline-sm text-primary">Restorative Fillings</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tooth-colored composite resins cured meticulously for seamless, natural smiles.</p>
+</div>
+</div>
+<!-- Service 3: Teeth Whitening -->
+<div class="p-4 rounded-xl bg-tertiary-fixed border border-surface-container-lowest/70 shadow-xs flex items-start gap-3.5 transition-transform duration-150 hover:-translate-y-0.5">
+<div class="h-10 w-10 shrink-0 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[22px]">auto_awesome</span>
+</div>
+<div class="space-y-0.5">
+<h3 class="font-headline-sm text-headline-sm text-primary">Gentle Teeth Whitening</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Enamel-safe desensitizing formulation designed for comfortable, radiant brightness.</p>
+</div>
+</div>
+<!-- Service 4: Braces & Alignment -->
+<div class="p-4 rounded-xl bg-tertiary-fixed border border-surface-container-lowest/70 shadow-xs flex items-start gap-3.5 transition-transform duration-150 hover:-translate-y-0.5">
+<div class="h-10 w-10 shrink-0 rounded-lg bg-surface-container-lowest flex items-center justify-center text-primary shadow-xs">
+<span class="material-symbols-outlined text-[22px]">view_agenda</span>
+</div>
+<div class="space-y-0.5">
+<h3 class="font-headline-sm text-headline-sm text-primary">Braces &amp; Alignment Consultations</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Orthodontic evaluations for teens and adults with clear aligner guidance.</p>
+</div>
+</div>
+<!-- Service 5: Emergency Dental Care (Highlighted) -->
+<div class="p-4 rounded-xl bg-surface-container-lowest border-2 border-secondary/40 shadow-sm flex items-start gap-3.5 relative overflow-hidden">
+<div class="absolute -right-3 -top-3 w-14 h-14 bg-secondary-container/20 rounded-full blur-lg pointer-events-none"></div>
+<div class="h-10 w-10 shrink-0 rounded-lg bg-secondary-container/20 flex items-center justify-center text-secondary shadow-xs">
+<span class="material-symbols-outlined text-[22px]" data-weight="fill">emergency</span>
+</div>
+<div class="space-y-1.5 flex-1">
+<div class="flex items-center justify-between gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Emergency Dental Care</h3>
+<span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">
+                  Same-day
+                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Immediate relief triage for acute toothache or fractures. Walk-ins prioritised during open hours.
+              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Clinic Hours & Location Card -->
+<section class="px-4" id="hours">
+<div class="p-5 rounded-2xl bg-tertiary-fixed border border-surface-container-lowest/70 shadow-xs space-y-4">
+<div class="flex items-center gap-2.5 pb-2 border-b border-primary/10">
+<div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">schedule</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Clinic Consultation Hours</h3>
+</div>
+<!-- Hours Table -->
+<div class="space-y-2 text-on-surface">
+<div class="flex justify-between items-center py-1">
+<span class="font-body-md text-body-md font-medium">Monday – Saturday</span>
+<span class="font-label-lg text-label-lg text-primary font-bold bg-surface-container-lowest/60 px-2 py-0.5 rounded">9:00 AM – 6:00 PM</span>
+</div>
+<div class="flex justify-between items-center py-1 border-t border-primary/5">
+<span class="font-body-md text-body-md font-medium text-on-surface-variant">Sunday</span>
+<span class="font-label-md text-label-md text-secondary font-medium">Closed Sunday</span>
+</div>
+</div>
+<!-- Continuous Inquiries Note -->
+<div class="p-3 rounded-lg bg-surface-container-lowest/80 border border-primary/10 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5" data-weight="fill">mark_chat_unread</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Online inquiries monitored continuously outside clinic hours.
+            </p>
+</div>
+<!-- Address Block -->
+<div class="pt-2 border-t border-primary/10 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">pin_drop</span>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Location</p>
+<p class="font-body-sm text-body-sm text-primary font-medium leading-relaxed">
+                3rd Flr Benguet Pine View Bldg, Session Road Ext., Baguio City
+              </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Inquiry Form (Signature White Card) -->
+<section class="px-4" id="inquiry">
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-[0_12px_32px_-8px_rgba(31,42,48,0.12)] border border-primary/10 space-y-5 relative">
+<!-- Card Header -->
+<div class="space-y-2">
+<div class="inline-flex items-center gap-1.5 bg-primary-fixed/40 text-on-primary-fixed-variant px-2.5 py-0.5 rounded-full font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+              Sub-minute reply
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-primary">
+              Send Dr. Andrea &amp; the team a note
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Prompt, friendly response directly to your phone or inbox • Sub-minute reply
+            </p>
+</div>
+<!-- Form Fields -->
+<form class="space-y-4" id="inquiryForm" onsubmit="event.preventDefault(); alert('Demo message received! Dr. Andrea and team will be notified.');">
+<!-- Full Name -->
+<div class="space-y-1">
+<label class="block font-label-md text-label-md font-semibold text-primary" for="fullName">Full Name</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg border border-primary/25 bg-surface text-on-surface placeholder:text-on-surface-variant/50 focus:border-primary focus:ring-2 focus:ring-secondary-container/20 text-body-md font-body-md outline-none transition-all" id="fullName" name="fullName" placeholder="e.g. Maria Santos" required="" type="text"/>
+</div>
+<!-- Email Address -->
+<div class="space-y-1">
+<label class="block font-label-md text-label-md font-semibold text-primary" for="email">Email Address</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg border border-primary/25 bg-surface text-on-surface placeholder:text-on-surface-variant/50 focus:border-primary focus:ring-2 focus:ring-secondary-container/20 text-body-md font-body-md outline-none transition-all" id="email" name="email" placeholder="maria@example.com" required="" type="email"/>
+</div>
+<!-- Phone Number -->
+<div class="space-y-1">
+<label class="block font-label-md text-label-md font-semibold text-primary" for="phone">Phone Number (Mobile)</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg border border-primary/25 bg-surface text-on-surface placeholder:text-on-surface-variant/50 focus:border-primary focus:ring-2 focus:ring-secondary-container/20 text-body-md font-body-md outline-none transition-all" id="phone" name="phone" placeholder="(0917) 000-0000" type="tel"/>
+</div>
+<!-- Preferred Time for Visit or Call -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md font-semibold text-primary">Preferred Time for Visit or Call</label>
+<div aria-label="Preferred consultation time" class="grid grid-cols-3 gap-2" role="radiogroup">
+<label class="cursor-pointer">
+<input class="peer sr-only" name="preferredTime" type="radio" value="Morning"/>
+<div class="text-center py-2 px-1 rounded-lg border border-primary/20 bg-surface peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary text-body-sm font-body-sm transition-all">
+                    Morning
+                  </div>
+</label>
+<label class="cursor-pointer">
+<input class="peer sr-only" name="preferredTime" type="radio" value="Afternoon"/>
+<div class="text-center py-2 px-1 rounded-lg border border-primary/20 bg-surface peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary text-body-sm font-body-sm transition-all">
+                    Afternoon
+                  </div>
+</label>
+<label class="cursor-pointer">
+<input checked="" class="peer sr-only" name="preferredTime" type="radio" value="Any time"/>
+<div class="text-center py-2 px-1 rounded-lg border border-primary/20 bg-surface peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary text-body-sm font-body-sm transition-all font-semibold">
+                    Any time
+                  </div>
+</label>
+</div>
+</div>
+<!-- Message Textarea -->
+<div class="space-y-1">
+<label class="block font-label-md text-label-md font-semibold text-primary" for="message">How can we help you?</label>
+<textarea class="w-full px-3.5 py-2.5 rounded-lg border border-primary/25 bg-surface text-on-surface placeholder:text-on-surface-variant/50 focus:border-primary focus:ring-2 focus:ring-secondary-container/20 text-body-md font-body-md outline-none transition-all resize-none" id="message" name="message" placeholder="Describe what you're experiencing or ask about procedure costs..." required="" rows="3"></textarea>
+</div>
+<!-- Verify You Are Human Security Container -->
+<div class="p-3 rounded-lg bg-surface border border-primary/15 flex items-center justify-between">
+<label class="flex items-center gap-2.5 cursor-pointer select-none">
+<input class="rounded-xs w-4 h-4 text-primary border-primary/30 focus:ring-tertiary-fixed cursor-pointer" id="humanCheck" required="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Verify you are human</span>
+</label>
+<div class="flex items-center gap-1 text-on-surface-variant/70">
+<span class="material-symbols-outlined text-[16px]">verified_user</span>
+<span class="font-label-sm text-label-sm">Protected</span>
+</div>
+</div>
+<!-- Submit Button (Sunrise Primary) -->
+<button class="w-full py-3.5 px-6 rounded-lg bg-secondary-container hover:bg-secondary text-on-secondary font-label-lg text-label-lg font-semibold shadow-sm hover:shadow active:scale-98 transition-all duration-150 flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Send inquiry</span>
+</button>
+<!-- Demo Note -->
+<p class="text-center font-label-sm text-label-sm text-on-surface-variant/70 italic">
+              Demo clinic — please use made-up details.
+            </p>
+</form>
+</div>
+</section>
+</main>
+<!-- 6. Pine Footer -->
+<footer class="bg-primary text-on-primary pt-8 pb-10 px-5 space-y-6">
+<!-- Clinic Title & Badge -->
+<div class="space-y-1.5 border-b border-on-primary/10 pb-5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed text-[24px]">dentistry</span>
+<h4 class="font-headline-sm text-headline-sm text-on-primary">Pinecrest Dental</h4>
+</div>
+<p class="font-label-sm text-label-sm text-primary-fixed tracking-widest font-semibold uppercase">
+          BAGUIO CITY • FAMILY CLINIC
+        </p>
+</div>
+<!-- Operating Hours Recap -->
+<div class="space-y-1 text-on-primary/80">
+<p class="font-label-md text-label-md text-on-primary font-semibold">Clinic Hours Recap</p>
+<p class="font-body-sm text-body-sm">Monday – Saturday: 9:00 AM – 6:00 PM</p>
+<p class="font-body-sm text-body-sm">Sunday: Closed for highland staff rest</p>
+</div>
+<!-- Footer Navigation Links -->
+<nav class="grid grid-cols-2 gap-2 text-body-sm font-body-sm pt-2">
+<a class="text-on-primary/80 hover:text-on-primary transition-colors py-1" href="#services">Services</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-colors py-1" href="#hours">Hours &amp; Directions</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-colors py-1" href="#hero">Team &amp; Philosophy</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-colors py-1" href="#services">Emergency Care</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-colors py-1" href="#inquiry">Patient Privacy</a>
+</nav>
+<!-- Copyright & Disclaimer -->
+<div class="pt-4 border-t border-on-primary/10 space-y-2 text-on-primary/60 font-body-sm text-body-sm">
+<p>© 2024 Pinecrest Dental Clinic. Baguio City Highlands. Fictional demo clinic for conceptual presentation.</p>
+<div class="flex items-center gap-1.5 text-on-primary/80 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Demo built with Lead Autopilot</span>
+</div>
+</div>
+</footer>
+</div>
+<!-- Mobile Drawer Micro-Interactions Script -->
+<script>
+    const drawerOpenBtn = document.getElementById('drawerOpenBtn');
+    const drawerCloseBtn = document.getElementById('drawerCloseBtn');
+    const navDrawer = document.getElementById('navDrawer');
+    const drawerOverlay = document.getElementById('drawerOverlay');
+
+    function openDrawer() {
+      drawerOverlay.classList.remove('hidden');
+      setTimeout(() => {
+        drawerOverlay.classList.remove('opacity-0');
+        navDrawer.classList.remove('translate-x-full');
+      }, 10);
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+      navDrawer.classList.add('translate-x-full');
+      drawerOverlay.classList.add('opacity-0');
+      setTimeout(() => {
+        drawerOverlay.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
+    }
+
+    drawerOpenBtn.addEventListener('click', openDrawer);
+    drawerCloseBtn.addEventListener('click', closeDrawer);
+    drawerOverlay.addEventListener('click', closeDrawer);
+
+    // Close drawer when any internal anchor is clicked
+    navDrawer.querySelectorAll('a').forEach(anchor => {
+      anchor.addEventListener('click', closeDrawer);
+    });
+  </script>
+</body></html>
